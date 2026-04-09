@@ -107,25 +107,41 @@ This provides all design tokens (colors, spacing, typography) and base styles fo
 - **TotpInput** -- OTP code input using InputOTP, auto-fires onComplete when all digits entered
 - **OidcButton** -- outline button for "Continue with {provider}" social login flows
 
+### Page layouts
+
+- **AppShell** -- page layout shell with `mode` prop: `"default"` (sidebar + topbar + content) and `"canvas"` (full viewport for designer)
+- **Sidebar** + **useSidebar()** -- main navigation sidebar with SidebarHeader, SidebarContent, SidebarFooter, NavGroup, NavItem, NavCollapsible. Manual collapse only. Mobile renders as Sheet overlay.
+- **TopBar** -- top navigation bar with breadcrumbs, search, and actions slots
+- **AuthLayout** -- centered card layout for authentication pages (logo, title, description, footer slots)
+- **Error pages** -- NotFoundPage (404), ForbiddenPage (403), ServerErrorPage (500) with i18n-ready text props
+- **NoAccessPage** -- access denied page for unauthorized users
+
+### Canvas support
+
+- **FloatingToolbar** -- positioned overlay toolbar (6 positions: top-left/center/right, bottom-left/center/right)
+- **SlidePanel** -- non-modal side panel sliding in from left or right, with header and scrollable content
+- **CollapsiblePanel** -- bottom-anchored panel with always-visible header, expandable content area
+
+### Data
+
+- **DataTable** -- TanStack Table wrapper with sorting, filtering, pagination, row selection, loading skeleton, empty state. All labels i18n-ready.
+- **Charts** -- LineChartWidget, BarChartWidget, AreaChartWidget, PieChartWidget wrapping Recharts with design tokens
+
+### Guards
+
+- **Authorize** -- conditional rendering based on `allowed` boolean, renders fallback (default: NoAccessPage) when unauthorized
+
+### Hooks
+
+- **useTheme()** -- light/dark/system mode with localStorage persistence. Wrap app in `<ThemeProvider>`.
+- **useSidebar()** -- sidebar collapse/expand state with localStorage persistence. Used within `<SidebarProvider>`.
+- **useConfirm()** -- Promise-based confirmation dialog. Returns `{ confirm, ConfirmDialog }`. Supports destructive variant.
+
 ### Utilities
 
 - **`cn()`** -- class name merging utility (clsx + tailwind-merge). Import: `import { cn } from '@qamelo-io/ui'`
 
-## Coming soon (Phase 2) -- DO NOT build locally
+## Coming soon -- DO NOT build locally
 
-These components are planned and will be added to `@qamelo-io/ui`. Do not create local implementations -- wait for the design system version.
-
-- **AppShell** -- page layout shell (default mode: sidebar + topbar + content; canvas mode: full viewport)
-- **Sidebar** + **useSidebar()** -- main navigation sidebar with NavGroup, NavItem, NavCollapsible
-- **TopBar** -- top navigation bar with breadcrumbs, search, and user menu slots
-- **DataTable** -- TanStack Table wrapper for all tabular data (sorting, filtering, pagination, empty state, loading skeleton)
-- **useConfirm()** -- Promise-based confirm dialog hook (replaces window.confirm)
-- **useTheme()** -- light/dark/system mode toggle with localStorage persistence
-- **Authorize** + **NoAccessPage** -- permission-aware conditional rendering
-- **Error pages** -- 404, 403, 500
-- **Canvas support** -- FloatingToolbar, SlidePanel, CollapsiblePanel
-- **Settings layout** + **Command Palette shell**
-
-## Coming soon (Phase 3)
-
-- Finalized visual identity (color palette, typography, spacing) via v0.app prototyping
+- **Settings layout** + **Command Palette shell** (Phase 2)
+- Finalized visual identity (color palette, typography, spacing) via v0.app prototyping (Phase 3)
