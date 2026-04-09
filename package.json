@@ -6,7 +6,7 @@
     "onlyBuiltDependencies": ["esbuild"]
   },
   "scripts": {
-    "build": "pnpm --filter @qamelo/ui build",
+    "build": "pnpm --filter @qamelo-io/ui build",
     "dev": "pnpm --filter storybook dev",
     "lint": "pnpm -r lint",
     "typecheck": "pnpm -r typecheck"

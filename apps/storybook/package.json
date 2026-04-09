@@ -10,7 +10,7 @@
     "typecheck": "echo 'no typecheck configured'"
   },
   "dependencies": {
-    "@qamelo/ui": "workspace:*",
+    "@qamelo-io/ui": "workspace:*",
     "react": "^19.1.0",
     "react-dom": "^19.1.0"
   },

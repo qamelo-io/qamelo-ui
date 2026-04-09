@@ -28,7 +28,7 @@ jobs:
           node-version: 22
           cache: pnpm
           registry-url: 'https://npm.pkg.github.com'
-          scope: '@qamelo'
+          scope: '@qamelo-io'
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
@@ -40,10 +40,10 @@ jobs:
         run: pnpm typecheck
 
       - name: Test
-        run: pnpm --filter @qamelo/ui test
+        run: pnpm --filter @qamelo-io/ui test
 
       - name: Build
-        run: pnpm --filter @qamelo/ui build
+        run: pnpm --filter @qamelo-io/ui build
 
       - name: Configure npm for GitHub Packages
         run: echo "//npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_TOKEN }}" >> .npmrc

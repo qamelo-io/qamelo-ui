@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { expect, userEvent, within } from "@storybook/test";
-import { Input } from "@qamelo/ui";
-import { Label } from "@qamelo/ui";
+import { Input } from "@qamelo-io/ui";
+import { Label } from "@qamelo-io/ui";
 
 const meta = {
   title: "Components/Input",

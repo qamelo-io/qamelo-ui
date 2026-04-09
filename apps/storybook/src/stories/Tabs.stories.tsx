@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { expect, userEvent, within } from "@storybook/test";
-import { Tabs, TabsList, TabsTrigger, TabsContent } from "@qamelo/ui";
+import { Tabs, TabsList, TabsTrigger, TabsContent } from "@qamelo-io/ui";
 
 const meta = {
   title: "Components/Tabs",

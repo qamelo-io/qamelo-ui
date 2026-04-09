@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { expect, fn, userEvent, within } from "@storybook/test";
-import { Button } from "@qamelo/ui";
+import { Button } from "@qamelo-io/ui";
 import { Mail, Loader2 } from "lucide-react";
 
 const meta = {

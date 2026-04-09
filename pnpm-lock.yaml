@@ -10,7 +10,7 @@ importers:
 
   apps/storybook:
     dependencies:
-      '@qamelo/ui':
+      '@qamelo-io/ui':
         specifier: workspace:*
         version: link:../../packages/ui
       react:

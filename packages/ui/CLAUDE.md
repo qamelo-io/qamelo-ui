@@ -1,4 +1,4 @@
-# @qamelo/ui
+# @qamelo-io/ui
 
 Shared design system for all Qamelo platform frontends. This package provides UI components, design tokens, and utilities. All Qamelo applications (qamelo-console, qamelo-iam, etc.) must use this library for their UI layer.
 
@@ -7,32 +7,32 @@ Shared design system for all Qamelo platform frontends. This package provides UI
 Add this import to your application's entry point (e.g., `main.tsx` or root layout):
 
 ```tsx
-import '@qamelo/ui/styles/globals.css'
+import '@qamelo-io/ui/styles/globals.css'
 ```
 
 This provides all design tokens (colors, spacing, typography) and base styles for light and dark mode.
 
 ## Rules
 
-1. **Always import from `@qamelo/ui`** -- never create local duplicates of components that exist in this package. All UI primitives come from the design system.
+1. **Always import from `@qamelo-io/ui`** -- never create local duplicates of components that exist in this package. All UI primitives come from the design system.
 
-2. **Import globals.css** -- `import '@qamelo/ui/styles/globals.css'` must be in your app entry point. This provides all design tokens and base styles. Without it, components will not render correctly.
+2. **Import globals.css** -- `import '@qamelo-io/ui/styles/globals.css'` must be in your app entry point. This provides all design tokens and base styles. Without it, components will not render correctly.
 
 3. **Icons: Lucide React only** -- `import { IconName } from 'lucide-react'`. No HTML entities, no emoji, no other icon libraries.
 
-4. **Class merging: use `cn()`** -- `import { cn } from '@qamelo/ui'`. Never concatenate class strings manually.
+4. **Class merging: use `cn()`** -- `import { cn } from '@qamelo-io/ui'`. Never concatenate class strings manually.
 
 5. **Colors: design tokens only** -- use Tailwind utilities (`bg-primary`, `text-muted-foreground`, `border-destructive`). Never hardcode hex/rgb/oklch values. Never use arbitrary Tailwind values for colors (`bg-[#xxx]`).
 
 6. **Dark mode** -- all components support light and dark mode automatically via CSS custom properties. When adding custom styling, use the `dark:` variant. Never check theme mode in JavaScript for styling purposes.
 
-7. **Forms** -- use React Hook Form + Zod for form validation. Use the `Form`, `FormField`, `FormItem`, `FormLabel`, `FormControl`, `FormMessage` components from `@qamelo/ui`.
+7. **Forms** -- use React Hook Form + Zod for form validation. Use the `Form`, `FormField`, `FormItem`, `FormLabel`, `FormControl`, `FormMessage` components from `@qamelo-io/ui`.
 
 8. **No browser dialogs** -- never use `window.confirm()`, `window.alert()`, or `window.prompt()`. Use the `Dialog` or `AlertDialog` components from this package. (Phase 2 will provide a `useConfirm()` hook for programmatic confirm dialogs.)
 
-9. **v0.app decomposition** -- when importing designs from v0.app: reusable UI components belong in `@qamelo/ui`, page-specific composition stays in the consumer app.
+9. **v0.app decomposition** -- when importing designs from v0.app: reusable UI components belong in `@qamelo-io/ui`, page-specific composition stays in the consumer app.
 
-10. **State management** -- `@qamelo/ui` is state-agnostic. Recommended: React Query (TanStack Query) for server state, Zustand for complex client state.
+10. **State management** -- `@qamelo-io/ui` is state-agnostic. Recommended: React Query (TanStack Query) for server state, Zustand for complex client state.
 
 ## Available components
 
@@ -101,11 +101,11 @@ This provides all design tokens (colors, spacing, typography) and base styles fo
 
 ### Utilities
 
-- **`cn()`** -- class name merging utility (clsx + tailwind-merge). Import: `import { cn } from '@qamelo/ui'`
+- **`cn()`** -- class name merging utility (clsx + tailwind-merge). Import: `import { cn } from '@qamelo-io/ui'`
 
 ## Coming soon (Phase 2) -- DO NOT build locally
 
-These components are planned and will be added to `@qamelo/ui`. Do not create local implementations -- wait for the design system version.
+These components are planned and will be added to `@qamelo-io/ui`. Do not create local implementations -- wait for the design system version.
 
 - **AppShell** -- page layout shell (default mode: sidebar + topbar + content; canvas mode: full viewport)
 - **Sidebar** + **useSidebar()** -- main navigation sidebar with NavGroup, NavItem, NavCollapsible

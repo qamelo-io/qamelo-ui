@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { expect, within } from "@storybook/test";
-import { Badge } from "@qamelo/ui";
+import { Badge } from "@qamelo-io/ui";
 
 const meta = {
   title: "Components/Badge",

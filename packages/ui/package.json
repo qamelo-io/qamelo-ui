@@ -1,5 +1,5 @@
 {
-  "name": "@qamelo/ui",
+  "name": "@qamelo-io/ui",
   "version": "0.0.1",
   "description": "Qamelo shared design system — UI components, tokens, and layouts",
   "type": "module",

@@ -1,6 +1,6 @@
 import type { Preview } from "@storybook/react";
 import { initialize, mswLoader } from "msw-storybook-addon";
-import "@qamelo/ui/styles/globals.css";
+import "@qamelo-io/ui/styles/globals.css";
 
 initialize();
 

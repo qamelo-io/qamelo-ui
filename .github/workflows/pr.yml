@@ -34,7 +34,7 @@ jobs:
         run: pnpm typecheck
 
       - name: Test
-        run: pnpm --filter @qamelo/ui test
+        run: pnpm --filter @qamelo-io/ui test
 
       - name: Build Storybook
         run: pnpm --filter storybook build

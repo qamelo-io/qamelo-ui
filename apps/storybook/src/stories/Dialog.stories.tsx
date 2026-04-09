@@ -11,7 +11,7 @@ import {
   Button,
   Input,
   Label,
-} from "@qamelo/ui";
+} from "@qamelo-io/ui";
 
 const meta = {
   title: "Components/Dialog",

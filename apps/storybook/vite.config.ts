@@ -7,14 +7,14 @@ export default defineConfig({
   resolve: {
     alias: [
       {
-        find: "@qamelo/ui/styles/globals.css",
+        find: "@qamelo-io/ui/styles/globals.css",
         replacement: path.resolve(
           __dirname,
           "../../packages/ui/src/tokens/globals.css",
         ),
       },
       {
-        find: "@qamelo/ui",
+        find: "@qamelo-io/ui",
         replacement: path.resolve(
           __dirname,
           "../../packages/ui/src/index.ts",

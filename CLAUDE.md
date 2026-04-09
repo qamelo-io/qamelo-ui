@@ -1,20 +1,20 @@
 # CLAUDE.md -- qamelo-ui
 
 This is the **qamelo-ui** monorepo -- the shared design system for all Qamelo platform frontends.
-Published as `@qamelo/ui` on the GitHub npm registry.
+Published as `@qamelo-io/ui` on the GitHub npm registry.
 
 ## Repository structure
 
 ```
 qamelo-ui/
-  packages/ui/       # @qamelo/ui -- the published design system package
+  packages/ui/       # @qamelo-io/ui -- the published design system package
   apps/storybook/    # Storybook 8 -- internal, not published
   pnpm-workspace.yaml
 ```
 
 - **pnpm workspaces** with `pnpm@10`. Always use `pnpm`, never npm or yarn.
 - `packages/ui` is the only publishable package. It contains all components, tokens, and utilities.
-- `apps/storybook` is the development environment for previewing and testing components. It imports from `@qamelo/ui` via workspace resolution.
+- `apps/storybook` is the development environment for previewing and testing components. It imports from `@qamelo-io/ui` via workspace resolution.
 
 ## Commands
 
@@ -22,8 +22,8 @@ qamelo-ui/
 pnpm install                          # Install all deps
 pnpm lint                             # Lint all workspaces
 pnpm typecheck                        # Typecheck all workspaces
-pnpm --filter @qamelo/ui test         # Run Vitest (packages/ui)
-pnpm --filter @qamelo/ui build        # Build the library (Vite)
+pnpm --filter @qamelo-io/ui test         # Run Vitest (packages/ui)
+pnpm --filter @qamelo-io/ui build        # Build the library (Vite)
 pnpm --filter storybook dev           # Start Storybook dev server (port 6006)
 pnpm --filter storybook build         # Build Storybook for deployment
 cd packages/ui && npm pack --dry-run  # Verify package contents
@@ -52,7 +52,7 @@ cd packages/ui && npm pack --dry-run  # Verify package contents
 ## Storybook conventions
 
 - Stories go in `apps/storybook/src/stories/`
-- Import components from `@qamelo/ui` (workspace resolution)
+- Import components from `@qamelo-io/ui` (workspace resolution)
 - Each component gets at minimum: a Default story and an AllVariants story
 - Key components should have interaction tests via `play()` functions
 - The a11y addon runs automatically on all stories
@@ -64,7 +64,7 @@ cd packages/ui && npm pack --dry-run  # Verify package contents
 - Test files at `packages/ui/src/components/__tests__/*.test.tsx`
 - Focus on external behavior, not internal implementation
 - Test: rendering, variants, click/interaction handlers, disabled states
-- Run with `pnpm --filter @qamelo/ui test`
+- Run with `pnpm --filter @qamelo-io/ui test`
 
 ## MSW (Mock Service Worker)
 
