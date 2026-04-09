@@ -99,6 +99,14 @@ This provides all design tokens (colors, spacing, typography) and base styles fo
 - **Form** -- React Hook Form integration (Form, FormField, FormItem, FormLabel, FormControl, FormDescription, FormMessage)
 - **InputOTP** -- one-time password input with grouped slots
 
+### Auth
+
+- **AuthLayout** -- centered card layout for authentication pages (logo, title, description, footer slots)
+- **LoginForm** -- email + password login form with error display, loading state, and children slot for OIDC buttons
+- **PasswordForm** -- new password + confirm password form with client-side mismatch validation
+- **TotpInput** -- OTP code input using InputOTP, auto-fires onComplete when all digits entered
+- **OidcButton** -- outline button for "Continue with {provider}" social login flows
+
 ### Utilities
 
 - **`cn()`** -- class name merging utility (clsx + tailwind-merge). Import: `import { cn } from '@qamelo-io/ui'`
@@ -114,7 +122,6 @@ These components are planned and will be added to `@qamelo-io/ui`. Do not create
 - **useConfirm()** -- Promise-based confirm dialog hook (replaces window.confirm)
 - **useTheme()** -- light/dark/system mode toggle with localStorage persistence
 - **Authorize** + **NoAccessPage** -- permission-aware conditional rendering
-- **Auth layouts** -- AuthLayout, LoginForm, PasswordForm, TotpInput, OidcButton
 - **Error pages** -- 404, 403, 500
 - **Canvas support** -- FloatingToolbar, SlidePanel, CollapsiblePanel
 - **Settings layout** + **Command Palette shell**
