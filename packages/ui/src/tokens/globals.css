@@ -1,6 +1,11 @@
 @import "tailwindcss";
 @import "./fonts.css";
 
+/* Ensure Tailwind scans component sources for utility classes */
+@source "../components";
+@source "../layouts";
+@source "../hooks";
+
 /*
  * Qamelo Design Tokens — forked wholesale from shadcn-admin
  *
