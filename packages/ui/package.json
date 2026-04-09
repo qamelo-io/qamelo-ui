@@ -64,6 +64,14 @@
     "vite": "^6.3.1",
     "vitest": "^4.1.4"
   },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/qamelo-io/qamelo-ui.git",
+    "directory": "packages/ui"
+  },
   "dependencies": {
     "@radix-ui/react-accordion": "^1.2.12",
     "@radix-ui/react-alert-dialog": "^1.1.15",
