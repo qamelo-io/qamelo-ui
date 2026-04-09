@@ -111,6 +111,8 @@ export {
   ContextMenuRadioGroup,
 } from "./components/context-menu";
 
+export { DataTable, type DataTableProps } from "./components/data-table";
+
 export {
   Dialog,
   DialogPortal,
@@ -299,3 +301,55 @@ export {
   TooltipContent,
   TooltipProvider,
 } from "./components/tooltip";
+
+export { Authorize } from "./components/authorize";
+
+// Hooks
+export { ThemeProvider, useTheme } from "./hooks/use-theme";
+export type { Theme, ThemeProviderProps, ThemeContextValue } from "./hooks/use-theme";
+export { SidebarProvider, useSidebar } from "./hooks/use-sidebar";
+export { useConfirm } from "./hooks/use-confirm";
+
+// Layouts
+export { AuthLayout } from "./layouts/auth-layout";
+export { AppShell } from "./layouts/app-shell";
+export {
+  Sidebar,
+  SidebarRoot,
+  SidebarHeader,
+  SidebarContent,
+  SidebarFooter,
+  SidebarTrigger,
+  NavGroup,
+  NavItem,
+  NavCollapsible,
+} from "./layouts/sidebar";
+export { TopBar } from "./layouts/top-bar";
+export { NotFoundPage, ForbiddenPage, ServerErrorPage } from "./layouts/error-pages";
+export { NoAccessPage } from "./layouts/no-access-page";
+export { FloatingToolbar } from "./layouts/floating-toolbar";
+export type { FloatingToolbarProps, ToolbarPosition } from "./layouts/floating-toolbar";
+export { SlidePanel } from "./layouts/slide-panel";
+export type { SlidePanelProps } from "./layouts/slide-panel";
+export { CollapsiblePanel } from "./layouts/collapsible-panel";
+export type { CollapsiblePanelProps } from "./layouts/collapsible-panel";
+
+// Chart widgets
+export {
+  LineChartWidget,
+  BarChartWidget,
+  AreaChartWidget,
+  PieChartWidget,
+} from "./components/charts";
+export type {
+  LineChartWidgetProps,
+  BarChartWidgetProps,
+  AreaChartWidgetProps,
+  PieChartWidgetProps,
+} from "./components/charts";
+
+// Auth components
+export { LoginForm } from "./components/login-form";
+export { PasswordForm } from "./components/password-form";
+export { TotpInput } from "./components/totp-input";
+export { OidcButton } from "./components/oidc-button";
