@@ -2,7 +2,12 @@ import type { Preview } from "@storybook/react";
 import { initialize, mswLoader } from "msw-storybook-addon";
 import "@qamelo-io/ui/styles/globals.css";
 
-initialize();
+initialize({
+  onUnhandledRequest: "bypass",
+  serviceWorker: {
+    url: `${import.meta.env.BASE_URL || "/"}mockServiceWorker.js`,
+  },
+});
 
 const preview: Preview = {
   globalTypes: {

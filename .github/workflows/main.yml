@@ -95,6 +95,8 @@ jobs:
 
       - name: Build Storybook
         run: pnpm --filter storybook build
+        env:
+          STORYBOOK_BASE: /qamelo-ui/
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
