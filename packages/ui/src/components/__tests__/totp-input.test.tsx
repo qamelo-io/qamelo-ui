@@ -4,11 +4,11 @@ import { TotpInput } from "../totp-input";
 
 beforeAll(() => {
   // input-otp uses ResizeObserver which is not available in jsdom
-  global.ResizeObserver = class {
+  (globalThis as Record<string, unknown>).ResizeObserver = class {
     observe() {}
     unobserve() {}
     disconnect() {}
-  } as unknown as typeof ResizeObserver;
+  };
 });
 
 describe("TotpInput", () => {
