@@ -49,6 +49,7 @@ jobs:
         run: echo "//npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_TOKEN }}" >> .npmrc
 
       - name: Publish to GitHub Packages
+        continue-on-error: true
         working-directory: packages/ui
         run: |
           PACKAGE_NAME=$(node -p "require('./package.json').name")
