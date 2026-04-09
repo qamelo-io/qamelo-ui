@@ -22,14 +22,28 @@ const preview: Preview = {
         dynamicTitle: true,
       },
     },
+    direction: {
+      description: "Text direction",
+      toolbar: {
+        title: "Direction",
+        items: [
+          { value: "ltr", icon: "paragraph", title: "LTR" },
+          { value: "rtl", icon: "paragraph", title: "RTL" },
+        ],
+        dynamicTitle: true,
+      },
+    },
   },
   initialGlobals: {
     theme: "light",
+    direction: "ltr",
   },
   decorators: [
     (Story, context) => {
       const theme = context.globals.theme;
+      const dir = context.globals.direction;
       document.documentElement.classList.toggle("dark", theme === "dark");
+      document.documentElement.dir = dir;
       return <Story />;
     },
   ],
