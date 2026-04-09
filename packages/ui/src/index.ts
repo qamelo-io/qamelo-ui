@@ -304,6 +304,9 @@ export {
 
 export { Authorize } from "./components/authorize";
 
+export { CommandPalette } from "./components/command-palette";
+export type { CommandPaletteItem, CommandPaletteProps } from "./components/command-palette";
+
 // Hooks
 export { ThemeProvider, useTheme } from "./hooks/use-theme";
 export type { Theme, ThemeProviderProps, ThemeContextValue } from "./hooks/use-theme";
@@ -333,6 +336,8 @@ export { SlidePanel } from "./layouts/slide-panel";
 export type { SlidePanelProps } from "./layouts/slide-panel";
 export { CollapsiblePanel } from "./layouts/collapsible-panel";
 export type { CollapsiblePanelProps } from "./layouts/collapsible-panel";
+export { SettingsLayout } from "./layouts/settings-layout";
+export type { SettingsSection, SettingsLayoutProps } from "./layouts/settings-layout";
 
 // Chart widgets
 export {

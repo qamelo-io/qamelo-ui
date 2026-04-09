@@ -75,6 +75,7 @@ This provides all design tokens (colors, spacing, typography) and base styles fo
 - **NavigationMenu** -- top-level site navigation with dropdowns
 - **Menubar** -- horizontal menu bar with submenus
 - **Command** -- searchable command palette / combobox
+- **CommandPalette** -- cmdk-based command palette with Ctrl+K/Cmd+K shortcut, grouped items, search filtering
 - **ContextMenu** -- right-click context menu
 - **DropdownMenu** -- menu triggered by a button click
 
@@ -118,6 +119,7 @@ This provides all design tokens (colors, spacing, typography) and base styles fo
 
 ### Canvas support
 
+- **SettingsLayout** -- content-area layout with section nav sidebar for settings pages
 - **FloatingToolbar** -- positioned overlay toolbar (6 positions: top-left/center/right, bottom-left/center/right)
 - **SlidePanel** -- non-modal side panel sliding in from left or right, with header and scrollable content
 - **CollapsiblePanel** -- bottom-anchored panel with always-visible header, expandable content area
@@ -143,5 +145,4 @@ This provides all design tokens (colors, spacing, typography) and base styles fo
 
 ## Coming soon -- DO NOT build locally
 
-- **Settings layout** + **Command Palette shell** (Phase 2)
 - Finalized visual identity (color palette, typography, spacing) via v0.app prototyping (Phase 3)
