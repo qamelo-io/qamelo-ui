@@ -1,0 +1,14 @@
+{
+  "name": "qamelo-ui-workspace",
+  "private": true,
+  "packageManager": "pnpm@10.26.2",
+  "pnpm": {
+    "onlyBuiltDependencies": ["esbuild"]
+  },
+  "scripts": {
+    "build": "pnpm --filter @qamelo/ui build",
+    "dev": "pnpm --filter storybook dev",
+    "lint": "pnpm -r lint",
+    "typecheck": "pnpm -r typecheck"
+  }
+}
